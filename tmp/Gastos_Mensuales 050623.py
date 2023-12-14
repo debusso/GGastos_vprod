@@ -453,11 +453,15 @@ def balance():
     #
     saldo = libro.sheets('Saldo Mensual').range('A2').options(pd.DataFrame, expand='table').value
     
-    v_ingreso = v_suma_haberes_cre + v_suma_extras_cre + v_suma_extras_efe
+    v_ingreso = v_suma_haberes_cre + v_suma_extras_cre + v_suma_extras_efe +  v_suma_inversiones_cre 
     v_egreso = v_suma_tarjetas_sin_imp + v_suma_tarjetas_efe + v_suma_gastos_deb + v_suma_gastos_efe + v_suma_impuestos_deb + v_suma_impuestos_efe
 
+
+    # CUIDADO 
+    # v_suma_inversiones_cre = Monto acreditado - Deposito
+
     saldo.loc['HABERES', col] = v_suma_haberes_cre
-    saldo.loc['EXTRAS', col]  = v_suma_extras_cre + v_suma_extras_efe
+    saldo.loc['EXTRAS', col]  = v_suma_extras_cre + v_suma_extras_efe + v_suma_inversiones_cre 
     saldo.loc['TOTAL INGRESOS', col] = v_ingreso
 
     saldo.loc['CONSUMO', col]   = v_suma_tarjetas_sin_imp + v_suma_tarjetas_efe + v_suma_gastos_deb + v_suma_gastos_efe
