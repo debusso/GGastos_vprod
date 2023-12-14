@@ -1,0 +1,27 @@
+El primer paso fue crear el proyecto con xlwings:
+
+Ingrese con terminal Prompt de Anaconda-Navigator y parado en C:\Users\debus\ ejecute
+
+(base) C:\Users\debus>xlwings quickstart GGastos_v060422
+
+Esto crea la carpeta GGastos_v060422 y 
+GGastos_v060422.py
+GGastos_v060422.xlsm
+
+Luego copie las planillas Menu, Impuestos, Gastos, Saldo Mensual, Prestamos, Plazo Fijo,
+CA Dolares, CSeg Dolares, Patrimonio del archivo Excel anterior.
+
+Copie el GastosMensuales.py del Proyecto anterior.
+
+Copiar y pegar con windows y obtengo la copia GGastos_v060422 - copia.xlsm
+
+PARA PROBAR:
+Genero las planillas mesuales y las puedo borrar y volver a generar si es necesario.
+
+
+
+
+
+
+ 
+
